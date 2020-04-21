@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="#{welcome}"></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- CSS 로드 -->
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/ionicons.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/css/AdminLTE.min.css}">
+
+    <!-- JS 로드 -->
+    <script type="text/javascript" th:src="@{/resources/js/jquery-3.1.0.min.js}"></script>
+
+</head>
+<body class="hold-transition login-page">
+<h2 th:text="#{welcome}">Welcom111e</h2>
+
+<div class="login-box" style="padding-top:9%;">
+
+    <div class="login-logo">
+        <a href="login"><b><span style='color:white'>서비스명<br>(테스트)</span></b></a><br>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+
+        <div class="form-horizontal" method="post" action="auth/login" id="auth_login">
+            <fieldset>
+                <div class="form-group has-feedback">
+                    <input id="AdminID" name="AdminID" type="adminid" class="form-control" placeholder="ID">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input id="AdminPwd" name="AdminPwd" type="password" class="form-control" placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+            </fieldset>
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+                            <!--<input type="checkbox"> Remember Me-->
+                        </label>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button id='_submit' type="button" class="btn btn-primary btn-block btn-flat">Log In</button>
+                </div>
+
+                <!-- /.col -->
+            </div>
+        </div>
+
+        <!-- /.social-auth-links -->
+        <a href="auth/find_idpwd">아이디 찾기</a><br>
+        <a href="auth/find_idpwd" class="text-center">비밀번호 찾기</a>
+
+        <a href="auth/nutrijoin" class="text-center pull-right">회원가입</a>
+
+    </div>
+    <div>
+        <a href='include/usedOpenLicense.php'><span class='pull-right' style='color:white;font-size:120%;'> used Open License</span></a>
+    </div>
+    <!-- /.login-box-body -->
+</div>
+</body>
+
+</html>

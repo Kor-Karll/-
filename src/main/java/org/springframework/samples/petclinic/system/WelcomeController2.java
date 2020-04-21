@@ -20,10 +20,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-class WelcomeController {
-
-	@GetMapping("/")
-	public String welcome() {
-		return "welcome";
-	}
+class WelcomeController2 {
+	@GetMapping("/welcome_test")
+    public String welcome_test() { return "welcome"; }
 }
